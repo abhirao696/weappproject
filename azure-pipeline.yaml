@@ -18,7 +18,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<Your Azure Service Connection Name>'
-    appName: '<Your App Service Name>'
+    azureSubscription: 'github.com_abhirao696'
+    appName: 'appfortest'
     package: '$(System.DefaultWorkingDirectory)'
 
