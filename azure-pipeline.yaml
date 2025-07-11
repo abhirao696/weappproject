@@ -16,9 +16,5 @@ steps:
     echo "You can add build steps here"
   displayName: 'Build your app'
 
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'github.com_abhirao696'
-    appName: 'appfortest'
-    package: '$(System.DefaultWorkingDirectory)'
+
 
