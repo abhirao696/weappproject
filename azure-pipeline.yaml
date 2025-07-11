@@ -18,7 +18,7 @@ steps:
 
 - task: AzureWebApp@1
   inputs:
-    azureSubscription: '<your-azure-service-connection-name>'
+    azureSubscription: 'connection 1'
     appName: 'appfortest'
     package: '$(System.DefaultWorkingDirectory)/dist'
   displayName: 'Deploy to Azure Web App'
