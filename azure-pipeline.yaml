@@ -1,4 +1,4 @@
-# azure-pipelines.yml
+
 trigger:
 - main
 
@@ -12,9 +12,15 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    echo "Deploying your web app"
-    echo "You can add build steps here"
-  displayName: 'Build your app'
+    npm install
+    npm run build
+  displayName: 'Install dependencies and build the app'
 
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '<your-azure-service-connection-name>'
+    appName: 'appfortest'
+    package: '$(System.DefaultWorkingDirectory)/dist'
+  displayName: 'Deploy to Azure Web App'
 
 
